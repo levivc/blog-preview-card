@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url("assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+    --ui-yellow: hsl(47, 88%, 63%);
+    --ui-grey: hsl(0, 0%, 42%);
+    --ui-dark: hsl(0, 0%, 7%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Figtree, sans-serif;
+    font-weight: 500;
+    color: var(--ui-dark);
+    background-color: var(--ui-yellow);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    /* Evaluates to 20.4375rem for a 375px wide viewport, and 24rem for 1440px */
+    width: calc(19.183rem + 5.352vi);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--ui-dark);
+    box-shadow: 0.5rem 0.5rem var(--ui-dark);
+
+    > img {
+        border-radius: 0.625rem;
+        height: 12.5rem;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    header {
+        /* Evaluates to 0.75rem for a 375px wide viewport, and 0.9rem for 1440px */
+        font-size: calc(0.697rem + 0.225vi);
+    }
+    .tag {
+        font-weight: 800;
+        background-color: var(--ui-yellow);
+        width: fit-content;
+        padding: 0.5em 1em;
+        border-radius: 0.4em;
+        margin: 1em 0;
+    }
+    section {
+        h1 {
+            /* Evaluates to 1.25rem for a 375px wide viewport, and 1.5rem for 1440px */
+            font-size: calc(1.162rem + 0.376vi);
+            font-weight: 800;
+            margin: 0.75em 0;
+        }
+        p {
+            line-height: 1.5;
+            color: var(--ui-grey);
+            /* Evaluates to 0.85rem for a 375px wide viewport, and 1.02rem for 1440px */
+            font-size: calc(0.79rem + 0.255vi);
+        }
+    }
+    a {
+        color: var(--ui-dark);
+        text-decoration: none;
+        &:hover, &:focus {
+            color: var(--ui-yellow);
+        }
+    }
+    footer {
+        /* Evaluates to 0.9rem for a 375px wide viewport, and 1.08rem for 1440px */
+        font-size: calc(0.837rem + 0.27vi);
+        font-weight: 800;
+        margin-top: 1.75em;
+        > img {
+            height: 2.25em;
+            vertical-align: middle;
+            margin-right: 0.5em;
+        }
+    }
+}
+
+.attribution {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    margin: 0.5rem 0;
+    font-size: 11px;
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+@media (min-height: 590px) {
+    .attribution {
+        display: block;
+    }
+}
