@@ -82,7 +82,8 @@ body {
     }
     footer {
         /* Evaluates to 0.9rem for a 375px wide viewport, and 1.08rem for 1440px */
-        font-size: calc(0.837rem + 0.27vi);
+        /* font-size: calc(0.837rem + 0.27vi); */
+        font-size: 0.9rem;
         font-weight: 800;
         margin-top: 1.75em;
         > img {
